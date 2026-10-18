@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>Contact | NexusFoods</title>
+    <meta name="description" content="Get in touch with Stackhouse for questions, feedback, catering and parties.">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700;800&family=Public+Sans:wght@400;500;600&display=swap">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="assets/js/theme.js"></script>
+  </head>
+  <body data-currency="Rs ">
+
+    <header>
+      <div class="bar">
+        <a class="logo" href="index.html"><span>Nexus</span>Foods<i>.</i></a>
+        <nav id="mainNav" aria-label="Main">
+          <a href="index.html">Home</a>
+          <a href="menu.html">Menu</a>
+          <a href="services.html">Services</a>
+          <a href="about.html">About</a>
+          <a href="contact.html" class="on" aria-current="page">Contact</a>
+        </nav>
+        <button type="button" class="ib" id="themeToggle" aria-label="Switch light or dark theme">
+          <svg class="i-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+          <svg class="i-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 13A9 9 0 1111 3a7 7 0 0010 10z"/></svg>
+        </button>
+        <button type="button" class="ib" id="cartBtn" aria-label="Open cart">Cart <span id="cartCount">0</span></button>
+        <button type="button" class="ib menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mainNav">
+          <svg class="i-bars" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+          <svg class="i-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <section class="wrap">
+        <h1 class="big" style="font-size: clamp(34px, 5vw, 54px);">Contact</h1>
+        <p class="lead" style="margin-top: 12px;">Questions, feedback or a party to plan? Write to us and we will reply within one working day.</p>
+
+        <div class="two">
+          <div>
+            <form id="contactForm" novalidate>
+              <label for="name" style="margin-top: 0;">Name</label>
+              <input id="name" autocomplete="name">
+              <div class="err" id="nameError"></div>
+
+              <label for="email">Email</label>
+              <input id="email" type="email" autocomplete="email">
+              <div class="err" id="emailError"></div>
+
+              <label for="topic">Topic</label>
+              <select id="topic">
+                <option>General question</option>
+                <option>Catering or party</option>
+                <option>Feedback</option>
+                <option>Careers</option>
+              </select>
+
+              <label for="message">Message</label>
+              <textarea id="message" rows="5"></textarea>
+              <div class="err" id="messageError"></div>
+
+              <button type="submit" class="btn ac" style="margin-top: 18px;">Send message</button>
+            </form>
+            <div id="formThanks" hidden>
+              <h3>Message sent</h3>
+              <p class="lead" style="margin-top: 12px;">Thanks. We will reply within one working day.</p>
+            </div>
+          </div>
+
+          <div>
+            <h3>Visit us</h3>
+            <p class="lead" style="margin: 8px 0 24px;">12 Food Street, Gulberg, Lahore</p>
+
+            <h3>Opening hours</h3>
+            <table class="hours">
+              <tr><td>Monday to Thursday</td><td>11am to 1am</td></tr>
+              <tr><td>Friday and Saturday</td><td>11am to 2am</td></tr>
+              <tr><td>Sunday</td><td>12pm to 1am</td></tr>
+            </table>
+
+            <h3 style="margin-top: 24px;">Call or write</h3>
+            <p class="lead" style="margin: 8px 0 0;">
+              <a href="tel:+923204964424">+92 320 496 4424</a><br>
+              <a href="mailto:rao.arifhussain5@gmail.com">rao.arifhussain5@gmail.com</a>
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="wrap">
+        <div>
+          <h3>Stackhouse</h3>
+          <p>Burgers, pizza, wings and more, cooked to order since 2016.</p>
+        </div>
+        <div>
+          <h3>Pages</h3>
+          <a href="index.html">Home</a>
+          <a href="menu.html">Menu</a>
+          <a href="services.html">Services</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div>
+          <h3>Find us</h3>
+          12 Food Street, Gulberg, Lahore<br>
+          Every day, 11am to 2am<br>
+          +92 300 000 0000
+        </div>
+      </div>
+    </footer>
+
+    <aside class="drawer" id="drawer" aria-label="Your cart" aria-hidden="true">
+      <div class="row" style="margin: 0;">
+        <h3>Your order</h3>
+        <button type="button" class="chip" id="closeCart">Close</button>
+      </div>
+      <ul id="cartItems">
+        <li><small>Your cart is empty. Add something from the menu.</small></li>
+      </ul>
+      <div class="row">
+        <span>Total</span>
+        <span class="price" id="cartTotal">Rs 0</span>
+      </div>
+      <button type="button" class="btn ac" style="margin-top: 16px; justify-content: center; border: 0;" id="checkout">Place order</button>
+    </aside>
+
+    <div class="toast" id="toast" role="status"></div>
+
+    <script src="assets/js/app.js"></script>
+  </body>
+</html>
